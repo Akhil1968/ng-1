@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html data-ng-app="">
+<head></head>
+<body>
+<INPUT type="text" data-ng-model="m_name" placeholder="Enter your name" /> {{m_name}}
+<h3> looping with ng-repeat and using filters</h3>
+<div data-ng-init="people=[ 
+							{name:'Akhil', city:'Pune'}, 
+							{name:'Gyan', city:'Delhi'}, 
+							{name:'Vijay', city:'Mumbai'}, 
+							{name:'Golu', city:'Gudgaon'}
+							]"  >
+<li data-ng-repeat="var in people | filter: m_name | orderBy: 'name'" >{{var.name}} {{ var.city}} index is {{$index}}</li>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"> </script>
+</body>
+</html>
+
+<!--"https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js" -->
+<!-- "../ng142/angular.min.js"  -->
