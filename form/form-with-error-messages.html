@@ -1,26 +1,7 @@
-
 <html ng-app="formApp">
-<head><title>Notes App</title></head>
+<head><title>Form Validation App</title></head>
 <body ng-controller="MainCtrl as ctrl">
-
-  <form ng-submit="ctrl.submit1()" name="simpleForm">
-    <input type="email"
-           name="uname"
-           ng-model="ctrl.user1.username"
-           ng-minlength="6">
-    <div ng-messages="simpleForm.uname.$error"
-         ng-messages-include="error-messages"></div>
-    <input type="password"
-           name="pwd"
-           ng-model="ctrl.user1.password"
-           required>
-    <div ng-messages="simpleForm.pwd.$error"
-         ng-messages-include="error-messages"></div>
-    <input type="submit"
-           value="Submit"
-           ng-disabled="simpleForm.$invalid">
-  </form>
-  <br><br><br>
+  <br>
   <form ng-submit="ctrl.submit2()" name="overriddenForm">
     <input type="email"
            name="uname"
@@ -55,6 +36,7 @@
   <div ng-message="minlength">Minimum length condition not met</div>
   <div ng-message="email">Please enter a valid email address</div>
 </script>
+
 <script type="text/javascript">
   angular.module('formApp', ['ngMessages'])
     .controller('MainCtrl', [function() {
