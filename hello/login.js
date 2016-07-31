@@ -1,7 +1,6 @@
 angular.module('LoginApp', [])
     .controller('MainCtrl', [function() {
       var self = this;
-
       self.change = function() {
         self.username = 'Tom';
         self.password = 'Jerry';
