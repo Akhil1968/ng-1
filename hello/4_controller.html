@@ -12,9 +12,8 @@
   var mymodule = angular.module('greetApp', []);
 
   mymodule.controller('MainCtrl', [function() {
-  		var self = this;
-        self.helloMsg = 'Hello ';
-        self.goodbyeMsg = 'Goodbye ';
+        var helloMsg = 'Hello';
+        this.goodbyeMsg = 'Goodbye';
   }]);
 </script>
 </body>

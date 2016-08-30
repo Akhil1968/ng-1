@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-ng-app="">
+<html data-ng-app=""> 
 <head></head>
 <body>
 <INPUT type="text" data-ng-model="m_name" placeholder="Enter your name" /> {{m_name}}
@@ -10,8 +10,8 @@
 							{name:'Vijay', city:'Mumbai'}, 
 							{name:'Golu', city:'Gudgaon'}
 							]"  >
-<li data-ng-repeat="var in people | filter: m_name | orderBy: 'name'" >
-{{$index + 1}} {{var.name}} {{ var.city}}  </li>
+<li data-ng-repeat="onePerson in people | filter: m_name | orderBy: 'name'" >
+{{$index + 1}} {{onePerson.name}} {{ onePerson.city}}  </li>
 </ul>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"> </script>
 </body>
