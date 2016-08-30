@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html > 
+<head>
+    <title>Filter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+</head>
+<body ng-app>
+<div ng-init="friends = [{name:'Anand', city:'Pune'},
+                         {name:'John', city:'NYC'},
+                         {name:'Alex', city:'Sydney'},
+                         {name:'Rajesh', city:'London'},
+                         {name:'Amar', city:'Delhi'},
+                         {name:'Juliette', city:'Paris'}]">
+</div>
+<div class="container">
+<h2> Understanding Angular Filters</h2>
+
+<div class="well">
+  <label>Filter Condition </label> <br>
+  <label>Any Field <input ng-model="search.$"></label><br>  
+  <label>Name Only <input ng-model="search.name"></label><br>
+</div>
+
+<table id="searchObjResults" class="table table-striped">
+  <tr><th>Name</th><th>City</th></tr>
+  <tr ng-repeat="friend in friends | filter:search">
+    <td>{{friend.name}}</td>
+    <td>{{friend.city}}</td>
+  </tr>
+</table>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"> </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
